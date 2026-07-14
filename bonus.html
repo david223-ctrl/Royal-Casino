@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бонусы - Royal Casino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+     
+        <div class="logo">
+            <i class="fa-solid fa-dice"></i>
+            <span>Royal Casino</span>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="navMenu" class="nav-menu">
+            <a href="index.html">Главная</a>
+            <a href="games.html">Игры</a>
+            <a href="bonus.html">Բոնուսներ</a>
+            <a href="vip.html">VIP</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="wheel.html">Колесо</a>
+        </nav>
+
+        <div class="buttons" id="auth-buttons">
+            <button class="login" onclick="openModal('login-modal')">Войти</button>
+            <button class="signup" onclick="openModal('register-modal')">Регистрация</button>
+        </div>
+        
+        <div class="buttons" id="user-profile" style="display: none; align-items: center; gap: 10px;">
+            <span style="font-size: 18px; color: #fff;">👤</span>
+            <span id="profile-username" style="color: #fff; font-weight: bold;"></span>
+            <button id="logout-btn" style="background: #ff4d4d; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px;">Выйти</button>
+        </div>
+        
+        
+    </header>
+    <main class="bonus-container">
+        <h1 class="page-title">Эксклюзивные Бонусы</h1>
+        
+        <div class="bonus-grid">
+            <div class="bonus-card">
+                <div class="icon">🎁</div>
+                <h3>Приветственный бонус</h3>
+                <p>100% бонус на первый депозит до 50,000 драм.</p>
+                <button class="play-btn" onclick="claimBonus('Приветственный бонус')">Активировать</button>
+            </div>
+            <div class="bonus-card">
+                <div class="icon">🔄</div>
+                <h3>Еженедельный кэшбэк</h3>
+                <p>Возвращаем 10% от проигранных средств каждый понедельник.</p>
+                <button class="play-btn" onclick="claimBonus('Кэшбэк')">Забрать</button>
+            </div>
+            <div class="bonus-card">
+                <div class="icon">⚡️</div>
+                <h3>Turbo Boost</h3>
+                <p>Удвоенные баллы лояльности в слотах по выходным.</p>
+                <button class="play-btn" onclick="claimBonus('Turbo Boost')">Включить</button>
+            </div>
+            <div class="bonus-card">
+                <div class="icon">💎</div>
+                <h3>VIP Статус</h3>
+                <p>Станьте VIP игроком и получите личного менеджера.</p>
+                <button class="play-btn" onclick="claimBonus('VIP Статус')">Узнать больше</button>
+            </div>
+        </div>
+    </main>
+
+
+    <main class="bonus-container">
+        <h1 class="page-title">Спецпредложения Royal Casino</h1>
+        
+        <div class="bonus-grid">
+            <div class="bonus-card"><h3>VIP Старт</h3><p>Бонус 200% на первый депозит.</p><button class="play-btn" onclick="claimBonus('VIP Старт')">Забрать</button></div>
+            <div class="bonus-card"><h3>Кэшбэк 15%</h3><p>Возврат средств для активных игроков.</p><button class="play-btn" onclick="claimBonus('Кэшбэк 15%')">Активировать</button></div>
+            <div class="bonus-card"><h3>Фриспины</h3><p>50 бесплатных вращений в слоте Olympus.</p><button class="play-btn" onclick="claimBonus('Фриспины')">Получить</button></div>
+            <div class="bonus-card"><h3>Ночной бонус</h3><p>Дополнительные бонусы с 00:00 до 06:00.</p><button class="play-btn" onclick="claimBonus('Ночной бонус')">Активировать</button></div>
+            <div class="bonus-card"><h3>Турнирный бонус</h3><p>Участие в турнире с призовым фондом.</p><button class="play-btn" onclick="claimBonus('Турнир')">Вступить</button></div>
+            <div class="bonus-card"><h3>Loyalty Pro</h3><p>Умножение очков лояльности х2.</p><button class="play-btn" onclick="claimBonus('Loyalty Pro')">Включить</button></div>
+        </div>
+    </main> 
+
+
+    <script src="script.js"></script>
+</body>
+</html>
